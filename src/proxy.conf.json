@@ -1,0 +1,7 @@
+{
+    "/domain/*": {
+        "target": "https://bia.com.br:35891",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

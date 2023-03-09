@@ -1,0 +1,77 @@
+<div class="logo">
+    <a href="javascript:void()" class="simple-text">
+        <img width="200" height="79" src="./assets/img/bradesco-bac.png">
+    </a>
+</div>
+<div class="sidebar-wrapper">
+    <ul class="nav">
+        <li routerLinkActive="active" *ngFor="let menuItem of menuFeatured" class="{{menuItem.class}} nav-item">
+            <a class="nav-link" [routerLink]="[menuItem.path]">
+                <i class="material-icons">{{menuItem.icon}}</i>
+                <p>{{menuItem.title}}</p>
+            </a>
+        </li>
+    </ul>
+
+    <br>
+
+    <mat-accordion class="example-headers-align" multi>
+        <mat-expansion-panel [expanded]="true">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Entries
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <ul class="nav">
+                <li routerLinkActive="active" *ngFor="let menuItem of menuEntries" class="{{menuItem.class}} nav-item">
+                    <a style="margin: 10px 0 !important;" class="nav-link" [routerLink]="[menuItem.path]">
+                        <i class="material-icons">{{menuItem.icon}}</i>
+                        <p>{{menuItem.title}}</p>
+                    </a>
+                </li>
+            </ul>
+        </mat-expansion-panel>
+
+        <!-- <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Configurações
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <ul class="nav">
+                <li routerLinkActive="active" *ngFor="let menuItem of menuSettigns" class="{{menuItem.class}} nav-item">
+                    <a class="nav-link" [routerLink]="[menuItem.path]">
+                        <i class="material-icons">{{menuItem.icon}}</i>
+                        <p>{{menuItem.title}}</p>
+                    </a>
+                </li>
+            </ul>
+        </mat-expansion-panel> -->
+
+
+    </mat-accordion>
+
+    <!-- <ul class="nav">
+        <li routerLinkActive="active" class="{{menuLogout.class}} nav-item">
+            <a class="nav-link" [routerLink]="[menuLogout.path]">
+                <i class="material-icons">{{menuLogout.icon}}</i>
+                <p>{{menuLogout.title}}</p>
+            </a>
+        </li>
+    </ul> -->
+
+    <br>
+
+    <hr>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link">
+                <i class="material-icons">info</i>
+                <p>v0.0.1</p>
+            </a>
+        </li>
+    </ul>
+
+</div>

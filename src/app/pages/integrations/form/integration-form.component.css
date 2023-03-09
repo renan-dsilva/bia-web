@@ -1,0 +1,13 @@
+.additional-selection {
+    opacity: 0.75;
+    font-size: 0.75em;
+  }
+
+.select-container{
+    margin-top:10px;
+}
+
+.form-session {
+  padding-right: 32px;
+  padding-left: 32px;
+}

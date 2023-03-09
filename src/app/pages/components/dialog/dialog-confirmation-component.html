@@ -1,0 +1,23 @@
+<h3 mat-dialog-title>{{ data.title }}</h3>
+<div mat-dialog-content>
+    {{ data.message }}
+</div>
+<mat-dialog-actions align="end">
+    <br>
+    <button class="btn btn-light pull-left" mat-button mat-dialog-close>Close</button>
+    &nbsp;
+    <button class="btn btn-danger pull-left" mat-button [mat-dialog-close]="true" cdkFocusInitial>Yes</button>
+
+    <!-- <div class="row">        
+        <div class="col-md-4">
+            <button mat-button [mat-dialog-close]="true" cdkFocusInitial mat-button mat-dialog-close mat-raised-button type="button" class="btn btn-primary pull-left">
+                Sim
+            </button>
+        </div>
+        <div class="col-md-4">
+            <button mat-button mat-dialog-close mat-raised-button type="button" class="btn btn-light pull-left">
+            Fechar
+            </button>
+        </div>
+    </div> -->
+</mat-dialog-actions>
