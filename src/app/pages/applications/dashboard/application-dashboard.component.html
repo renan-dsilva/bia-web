@@ -139,7 +139,8 @@
                                                     <mat-chip-list #chipList aria-label="Application List">
                                                         <mat-chip *ngFor="let application of applications"
                                                             [selectable]="selectable" [selected]="false"
-                                                            (click)="openApplicationDetails(application)">
+                                                            (click)="openApplicationDetails(application)"
+                                                            [ngStyle]="(application.name === 'Assist') ? {'background-color': 'red' , 'color': 'white'} : (application.name === 'Netx360') ? {'background-color': 'yellow' } :{}">
                                                             {{application.name}}
                                                         </mat-chip>
                                                         <input autocomplete="off"

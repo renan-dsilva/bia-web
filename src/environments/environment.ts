@@ -1,7 +1,7 @@
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3000',
-  appName: 'BIA - Business Impact Analysis [dev]',
+  apiUrl: 'https://bia-services-production.up.railway.app',
+  appName: 'Business Impact Analysis',
   logoSquareUrl: 'http://localhost:3000/images/logo.png',
   AwsS3Domain: 'https://bia-media-cdn.s3-sa-east-1.amazonaws.com',
 

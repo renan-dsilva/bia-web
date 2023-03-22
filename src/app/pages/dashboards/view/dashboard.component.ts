@@ -19,7 +19,7 @@ import { DashboardProvider } from '../dashboard.provider';
 export class DashboardComponent implements OnInit {
   public data = new Dashboard();
   public source: MatTableDataSource<Application>;
-  public displayedColumns: string[] = ['name', 'processes', 'support', 'actions'];
+  public displayedColumns: string[] = ['status', 'name', 'processes', 'support', 'actions'];
 
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;

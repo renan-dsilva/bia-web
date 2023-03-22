@@ -7,12 +7,12 @@
                         <div class="card-icon">
                             <i class="material-icons">memory</i>
                         </div>
-                        <p class="card-category">Total Systems</p>
-                        <h3 class="card-title">1.234</h3>
+                        <p class="card-category">Total <br/>Systems</p>
+                        <h3 class="card-title">37</h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
-                            Number of systems integrated
+                            <!-- Number of systems integrated -->
                         </div>
                     </div>
                 </div>
@@ -23,12 +23,12 @@
                         <div class="card-icon">
                             <i class="material-icons">location_on</i>
                         </div>
-                        <p class="card-category">Total Areas</p>
-                        <h3 class="card-title">1.234</h3>
+                        <p class="card-category">Total <br/> Areas</p>
+                        <h3 class="card-title">14</h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
-                            Number of areas affected
+                            <!-- Number of areas affected -->
                         </div>
                     </div>
                 </div>
@@ -39,12 +39,12 @@
                         <div class="card-icon">
                             <i class="material-icons">sync</i>
                         </div>
-                        <p class="card-category">Total Processes</p>
-                        <h3 class="card-title">1.234</h3>
+                        <p class="card-category">Total <br/> Processes</p>
+                        <h3 class="card-title">154</h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
-                            Number of processes affected
+                            <!-- Number of processes affected -->
                         </div>
                     </div>
                 </div>
@@ -55,8 +55,8 @@
                         <div class="card-icon">
                             <i class="material-icons">link</i>
                         </div>
-                        <p class="card-category">Total of integratinos</p>
-                        <h3 class="card-title">222</h3>
+                        <p class="card-category">Total of <br/> integratinos</p>
+                        <h3 class="card-title">55</h3>
                     </div>
                     <div class="card-footer">
                         <!-- <div class="stats">
@@ -64,7 +64,7 @@
                             <a href="javascript:void(0)">Ler as Mensagens</a>
                         </div> -->
                         <div class="stats">
-                            Number of active support agents
+                            <!-- Number of active support agents -->
                         </div>
 
                     </div>
@@ -86,9 +86,21 @@
 
                             <table mat-table [dataSource]="source" matSort class="table">
 
+
+                                <ng-container matColumnDef="status">
+                                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+                                    <td mat-cell *matCellDef="let element" > 
+                                        <i *ngIf="element.name === 'Assist'" style="color:red" class="material-icons">circle</i>
+                                        <i *ngIf="element.name === 'Netx360'" style="color:yellow" class="material-icons">circle</i>
+                                        <i *ngIf="element.name !== 'Assist' && element.name !== 'Netx360'" style="color:green" class="material-icons">circle</i>
+                                     </td>
+                                </ng-container>
+
                                 <ng-container matColumnDef="name">
                                     <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
-                                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                                    <td mat-cell *matCellDef="let element" > 
+                                       {{element.name}}
+                                     </td>
                                 </ng-container>
 
                                 <ng-container matColumnDef="processes">
